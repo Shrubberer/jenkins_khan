@@ -7,17 +7,20 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage("Checkout") {
+
+        stage('Checkout') {
             steps {
                 checkout scm
             }
         }
-        stage("Docker Build") {
+
+        stage('Start OpenShift Build') {
             steps {
-              sh '''
-                  #oc start-build --from-build=<build_name>
-                  oc start-build -F red-api --from-dir=./api/
-              '''
+                sh '''
+                    oc whoami
+                    oc project demo-ci
+                    oc start-build hello-world --from-dir=. --follow --wait
+                '''
             }
         }
     }
