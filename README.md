@@ -1,3 +1,3 @@
-Just a simple hello world local
+Just a simple hello world ok
 ************************
 ########################
