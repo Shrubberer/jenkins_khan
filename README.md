@@ -1,3 +1,3 @@
-Just a simple hello world test
+Just a simple hello world remote
 ************************
 ########################
