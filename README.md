@@ -1,2 +1,2 @@
-Just a simple hello world 
+Just a simple hello world test
 ************************
